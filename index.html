@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <style>
+      html * {
+        font-family: "Courier New";
+      }
+      body {
+        background: url("https://i.pinimg.com/originals/ae/e8/3d/aee83d11caeb7cd3df17475de5df859d.jpg")
+          no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+      h1,
+      small {
+        color: white;
+        font-weight: bolder;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+      <h1>WEATHER APP</h1>
+      <small>(Enter any city on Planet Earf)</small>
+      <form id="form" autocomplete="off">
+        <input
+          type="text"
+          class="form-control w-50 mx-auto mt-5 mb-1"
+          id="search"
+          placeholder="Enter city..."
+        />
+      </form>
+    </div>
+    <div class="container text-center" id="data"></div>
+
+    <div class="container" id="content">
+      <button
+        hidden
+        id="canvas"
+        class="btn btn-primary"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasBottom"
+        aria-controls="offcanvasBottom"
+      >
+        Toggle bottom offcanvas
+      </button>
+
+      <div
+        class="offcanvas offcanvas-bottom"
+        tabindex="-1"
+        id="offcanvasBottom"
+        aria-labelledby="offcanvasBottomLabel"
+      >
+        <div class="offcanvas-header">
+          <h4 class="offcanvas-title" id="offcanvasBottomLabel">
+            Current Weather for Chicago
+          </h4>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body small">
+          <h6 id="high">High: 75</h6>
+          <h6 id="low">Low: 45</h6>
+          <h6 id="forecast">Forecast: Scattered Clouds</h6>
+          <h6 id="humidity">Humidity: 56%</h6>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="main.js"></script>
+  </body>
+</html>
